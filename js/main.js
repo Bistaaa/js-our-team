@@ -2,36 +2,41 @@ const teamInfo = [
     {
         "name": "Wayne Barnett",
         "role": "Founder & CEO",
-        "picture": "wayne-barnett-founder-ceo.jpg", 
+        "picture": "img/wayne-barnett-founder-ceo.jpg", 
     },
     {
         "name": "Angela Caroll",
         "role": "Chief Editor",
-        "picture": "angela-caroll-chief-editor.jpg", 
+        "picture": "img/angela-caroll-chief-editor.jpg", 
     },
     {
         "name": "Walter Gordon",
         "role": "Office Manager",
-        "picture": "walter-gordon-office-manager.jpg", 
+        "picture": "img/walter-gordon-office-manager.jpg", 
     },
     {
         "name": "Angela Lopez",
         "role": "Social Media Manager",
-        "picture": "angela-lopez-social-media-manager.jpg", 
+        "picture": "img/angela-lopez-social-media-manager.jpg", 
     },
     {
         "name": "Scott Estrada	",
         "role": "Developer",
-        "picture": "scott-estrada-developer.jpg", 
+        "picture": "img/scott-estrada-developer.jpg", 
     },
     {
         "name": "Barbara Ramos",
         "role": "Graphic Designer",
-        "picture": "barbara-ramos-graphic-designer.jpg", 
+        "picture": "img/barbara-ramos-graphic-designer.jpg", 
     }
 ];
 
 for (let i = 0; i < teamInfo.length; i++) {
+
+    //image
+    const pictureArray = teamInfo[i].picture;
+    const pictureDom = document.createElement("img");
+    pictureDom.src = pictureArray;
 
     //nome
     const nameArray = teamInfo[i].name;
@@ -42,6 +47,7 @@ for (let i = 0; i < teamInfo.length; i++) {
     const roleDom = document.createElement("p");
 
     const container = document.getElementById("team_info");
+    container.appendChild(pictureDom);
     container.append(nameDom, roleDom);
     nameDom.append(nameArray);
     roleDom.append(roleArray);
