@@ -32,6 +32,9 @@ const teamInfo = [
 ];
 
 for (let i = 0; i < teamInfo.length; i++) {
-    const infoArray = teamInfo[i];
-    console.log(infoArray);    
+    const nameArray = teamInfo[i].name;
+    const nameDom = document.createElement("h2");
+    const container = document.getElementById("team_info");
+    container.append(nameDom);
+    nameDom.append(nameArray);
 }
