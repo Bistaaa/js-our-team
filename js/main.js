@@ -32,9 +32,17 @@ const teamInfo = [
 ];
 
 for (let i = 0; i < teamInfo.length; i++) {
+
+    //nome
     const nameArray = teamInfo[i].name;
     const nameDom = document.createElement("h2");
+
+    //role
+    const roleArray = teamInfo[i].role;
+    const roleDom = document.createElement("p");
+
     const container = document.getElementById("team_info");
-    container.append(nameDom);
+    container.append(nameDom, roleDom);
     nameDom.append(nameArray);
+    nameDom.append(roleArray);
 }
