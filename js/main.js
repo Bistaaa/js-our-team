@@ -46,9 +46,13 @@ for (let i = 0; i < teamInfo.length; i++) {
     const roleArray = teamInfo[i].role;
     const roleDom = document.createElement("p");
 
-    const container = document.getElementById("team_info");
-    container.appendChild(pictureDom);
-    container.append(nameDom, roleDom);
+    const containerMain = document.getElementById("container");
+    const containerInfo = document.createElement("div");
+    containerInfo.classList.add("team_info");
+    containerMain.append(containerInfo);
+
+    containerInfo.appendChild(pictureDom);
+    containerInfo.append(nameDom, roleDom);
     nameDom.append(nameArray);
     roleDom.append(roleArray);
 }
