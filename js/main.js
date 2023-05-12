@@ -28,5 +28,10 @@ const teamInfo = [
         "name": "Barbara Ramos",
         "role": "Graphic Designer",
         "picture": "barbara-ramos-graphic-designer.jpg", 
-    },
-]
+    }
+];
+
+for (let i = 0; i < teamInfo.length; i++) {
+    const infoArray = teamInfo[i];
+    console.log(infoArray);    
+}
