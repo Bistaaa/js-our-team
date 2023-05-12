@@ -44,5 +44,5 @@ for (let i = 0; i < teamInfo.length; i++) {
     const container = document.getElementById("team_info");
     container.append(nameDom, roleDom);
     nameDom.append(nameArray);
-    nameDom.append(roleArray);
+    roleDom.append(roleArray);
 }
